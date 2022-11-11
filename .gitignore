@@ -34,3 +34,5 @@ yarn-error.log*
 .vercel
 
 src/node_modules/
+src/.vscode/settings.json
+src/.next
