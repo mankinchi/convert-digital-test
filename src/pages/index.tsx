@@ -1,6 +1,11 @@
 import Head from 'next/head';
+import { useGetProduct } from '../graphql/getProduct';
 
 export default function Home() {
+	const { loading, data } = useGetProduct();
+
+	console.log(loading, data);
+
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen py-2">
 			<Head>

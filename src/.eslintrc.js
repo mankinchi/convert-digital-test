@@ -9,10 +9,12 @@ module.exports = {
 	parserOptions: {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
-		project: '/src/tsconfig.json',
+		project: './src/tsconfig.json',
 	},
 	plugins: ['react', '@typescript-eslint'],
 	rules: {
+		'import/prefer-default-export': 'off',
+		'linebreak-style': 'off',
 		'no-tabs': ['error', { allowIndentationTabs: true }],
 		'react/react-in-jsx-scope': 'off',
 		'react/jsx-indent': ['error', 'tab'],
