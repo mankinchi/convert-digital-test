@@ -13,11 +13,16 @@ module.exports = {
 	},
 	plugins: ['react', '@typescript-eslint'],
 	rules: {
+		'@typescript-eslint/indent': ['error', 'tab'],
 		'import/prefer-default-export': 'off',
+		'jsx-a11y/click-events-have-key-events': 'off',
+		'jsx-a11y/no-static-element-interactions': 'off',
 		'linebreak-style': 'off',
 		'no-tabs': ['error', { allowIndentationTabs: true }],
-		'react/react-in-jsx-scope': 'off',
+		'react/function-component-definition': 'off',
+		'react/jsx-indent-props': ['error', 'tab'],
 		'react/jsx-indent': ['error', 'tab'],
-		'@typescript-eslint/indent': ['error', 'tab'],
+		'react/react-in-jsx-scope': 'off',
+		'react/require-default-props': 'off',
 	},
 };
