@@ -1,28 +1,18 @@
-import { gql, useQuery } from '@apollo/client';
+import { gql } from '@apollo/client';
 
-const query = gql`
+export const getProductQuery = gql`
 	query {
-		product(
-			handle: "world-of-warcraft-lich-king-arthas-26-premium-statue"
-		) {
-			availableForSale
+		product(handle: "bounds-short-blue-206") {
 			description
 			descriptionHtml
 			handle
 			images(first: 20) {
 				nodes {
+					id
 					altText
-					url
-				}
-			}
-			featuredImage {
-				altText
-				url
-			}
-			collections(first: 10) {
-				nodes {
-					description
-					descriptionHtml
+					src: url
+					height
+					width
 				}
 			}
 			options {
@@ -44,33 +34,24 @@ const query = gql`
 			variants(first: 50) {
 				nodes {
 					id
+					title
 					priceV2 {
 						amount
 						currencyCode
 					}
 					image {
+						id
 						src
 						altText
+						height
+						width
+					}
+					selectedOptions {
+						name
+						value
 					}
 				}
 			}
 		}
 	}
 `;
-
-// const query = gql`
-// 	{
-// 		products(first: 10) {
-// 			nodes {
-// 				id
-// 				handle
-// 			}
-// 		}
-// 	}
-// `;
-
-export const useGetProduct = () => {
-	const { loading, data } = useQuery(query);
-
-	return { loading, data };
-};
