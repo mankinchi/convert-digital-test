@@ -71,7 +71,7 @@ export default function Home(props: Props) {
 	return (
 		<>
 			<Head>
-				<title>Create Next App</title>
+				<title>Convert Digital FE Test</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<CartContext.Provider value={cartContextValue}>
